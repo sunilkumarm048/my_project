@@ -1,26 +1,124 @@
-<!DOCKTYPE html>
-<html>
-<body>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>1st_Project</title>
+    <meta charset="UTF-8">
+    <title>My Projects Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f4f4;
+        }
+
+        /* Top Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            padding: 15px 20px;
+            color: white;
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .nav-buttons button {
+            margin-left: 10px;
+            padding: 8px 15px;
+            border: none;
+            background: #4CAF50;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .nav-buttons button:hover {
+            background: #45a049;
+        }
+
+        /* Main Content */
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .project-card {
+            display: inline-block;
+            width: 200px;
+            padding: 20px;
+            margin: 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .project-card button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            border: none;
+            background: #2196F3;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .project-card button:hover {
+            background: #0b7dda;
+        }
+    </style>
 </head>
-<h1 id="count">0</h1>
 
-<button onclick="increase()">+</button>
-<button onclick="decrease()">-</button>
+<body>
 
-<script>
-let count = 0;
+    <!-- Top Navbar -->
+    <div class="navbar">
+        <h2>My Projects 🚀</h2>
 
-function increase() {
-    count++;
-    document.getElementById("count").innerText = count;
-}
+        <div class="nav-buttons">
+            <button onclick="openProject('counter.html')">Counter</button>
+            <button onclick="openProject('todo.html')">To-Do</button>
+            <button onclick="openProject('calculator.html')">Calculator</button>
+            <button onclick="openProject('weather.html')">Weather</button>
+        </div>
+    </div>
 
-function decrease() {
-    count--;
-    document.getElementById("count").innerText = count;
-}
-</script>
+    <!-- Main Content -->
+    <div class="container">
+
+        <div class="project-card">
+            <h3>Counter</h3>
+            <p>Simple counter app</p>
+            <button onclick="openProject('counter.html')">Open</button>
+        </div>
+
+        <div class="project-card">
+            <h3>To-Do List</h3>
+            <p>Manage your tasks</p>
+            <button onclick="openProject('todo.html')">Open</button>
+        </div>
+
+        <div class="project-card">
+            <h3>Calculator</h3>
+            <p>Basic calculator</p>
+            <button onclick="openProject('calculator.html')">Open</button>
+        </div>
+
+        <div class="project-card">
+            <h3>Weather App</h3>
+            <p>Check weather</p>
+            <button onclick="openProject('weather.html')">Open</button>
+        </div>
+
+    </div>
+
+    <script>
+        function openProject(file) {
+            window.location.href = file;
+        }
+    </script>
+
 </body>
 </html>
