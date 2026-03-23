@@ -4,6 +4,23 @@
 <head>
 <title>1st_Project</title>
 </head>
-<h1>Counter</h1>
+<h1 id="count">0</h1>
+
+<button onclick="increase()">+</button>
+<button onclick="decrease()">-</button>
+
+<script>
+let count = 0;
+
+function increase() {
+    count++;
+    document.getElementById("count").innerText = count;
+}
+
+function decrease() {
+    count--;
+    document.getElementById("count").innerText = count;
+}
+</script>
 </body>
 </html>
